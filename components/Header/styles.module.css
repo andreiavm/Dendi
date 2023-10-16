@@ -1,0 +1,16 @@
+.logo_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+.logo_header {
+    color: var(--grey);
+}
