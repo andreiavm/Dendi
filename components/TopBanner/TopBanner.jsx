@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './styles.module.css'
+import { data } from '../../data.js';
 
 
 const TopBanner = () => {
     return (
         <div className={styles.banner}>
-            <p className="text-body-bold">✨ Get 10% off on your first order with code DENDI10 ✨</p>
+            <p className="text-note">{data.topBanner}</p>
         </div >
     );
 };

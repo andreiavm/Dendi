@@ -1,4 +1,6 @@
 const data = {
+
+    topBanner: "✨ Get 10% off on your first order with code DENDI10 ✨",
     header: {
         logoSrc: "/logo-dendi.svg",
         logoAlt: "Dendi Logo",

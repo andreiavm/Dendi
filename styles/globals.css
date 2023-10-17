@@ -208,11 +208,19 @@ body {
   font-weight: 700;
   line-height: 150%;
 }
+
 .text-body {
   font-family: "Saans Trial", sans-serif;
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 150%;
+}
+
+.text-note {
+  font-family: "Saans Trial", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 130%;
 }
 
 /* Layout */
