@@ -60,6 +60,7 @@
 
 .container_right {
     width: 45%;
+    align-self: center;
 }
 
 .container_left {
