@@ -16,7 +16,7 @@ const Header = () => {
                     alt={data.header.logoAlt}
                     width="459" height="79" >
                 </Image>
-                <h2 className={`${styles.logo_header} text-header-small`}>~ stationery & more ~</h2>
+                <h2 className={`${styles.logo_header} text-header-small`}>~ stationery & more 💌 ~</h2>
             </div>
             <Navbar />
         </>

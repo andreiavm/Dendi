@@ -1,0 +1,21 @@
+.button {
+    display: inline-flex;
+    padding: 1.25rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    background: var(--purple);
+    box-shadow: 5px 5px 0px 0px var(--black);
+    color: var(--white, #FEFEFE);
+    font-family: Yorick trial;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: 4px;
+}
+
+.button:hover {
+    background: var(--purple-800);
+    /* text-decoration: underline; */
+    cursor: pointer;
+}

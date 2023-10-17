@@ -14,5 +14,5 @@
 
 .nav_link:hover {
     text-decoration: wavy underline var(--black);
-    color: var (--black)
+    color: var (--black);
 }

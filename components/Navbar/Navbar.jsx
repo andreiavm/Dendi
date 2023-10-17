@@ -7,22 +7,22 @@ const Navbar = () => {
   return (
     <nav className="container">
       <div className={styles.nav_container}>
-        <Link className={`${styles.nav_link} text-body`} href="/">
+        <Link className={`${styles.nav_link} text-body-serif`} href="/">
           New In
         </Link>
-        <Link className={`${styles.nav_link} text-body`} href="/">
+        <Link className={`${styles.nav_link} text-body-serif`} href="/">
           Diaries & Planners
         </Link>
-        <Link className={`${styles.nav_link} text-body`} href="/">
+        <Link className={`${styles.nav_link} text-body-serif`} href="/">
           Notebook & Journals
         </Link>
-        <Link className={`${styles.nav_link} text-body`} href="/">
+        <Link className={`${styles.nav_link} text-body-serif`} href="/">
           Accesories
         </Link>
-        <Link className={`${styles.nav_link} text-body`} href="/">
+        <Link className={`${styles.nav_link} text-body-serif`} href="/">
           Cards
         </Link>
-        <Link className={`${styles.nav_link} text-body`} href="/">
+        <Link className={`${styles.nav_link} text-body-serif`} href="/">
           Magazines
         </Link>
       </div>

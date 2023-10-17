@@ -1,10 +1,18 @@
 /* Fonts  */
 @font-face {
   font-family: 'Saans Trial';
-  src: url(../assets/fonts/SaansTRIALVF.ttf);
+  src:
+    url(../assets/fonts/SaansTRIALVF.ttf) format("truetype") font-weight-400,
+    url(../assets/fonts/SaansTRIALVF.ttf) format("truetype") font-weight-500,
+    url(../assets/fonts/SaansTRIALVF.ttf) format("truetype") font-weight-600,
+    url(../assets/fonts/SaansTRIALVF.ttf) format("truetype") font-weight-700,
+    url(../assets/fonts/SaansTRIALVF.ttf) format("truetype") font-weight-800,
+    url(../assets/fonts/SaansTRIALVF.ttf) format("truetype") font-weight-900;
   font-style: normal;
   font-display: swap;
 }
+
+
 
 @font-face {
   font-family: 'Clash Display';
@@ -17,7 +25,7 @@
 @font-face {
   font-family: 'Clash Display';
   src: url(../assets/fonts/ClashDisplay-Bold.otf);
-  font-weight: bold;
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -25,7 +33,23 @@
 @font-face {
   font-family: 'Clash Display';
   src: url(../assets/fonts/ClashDisplay-Semibold.otf);
-  font-weight: semi-bold;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yorick Trial';
+  src: url(../assets/fonts/YorickTrial-Regular.otf);
+  font-weight: regular;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yorick Trial';
+  src: url(../assets/fonts/YorickTrial-Bold.otf);
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
@@ -33,13 +57,49 @@
 
 /* Variables  */
 :root {
+  --bg-pink: #ffdfdf;
   --black: #151313;
-  --white: #FEFEFE;
-  --grey: #2a2a2a;
-  --cold-blue: #2A4A94;
-  --bright-blue: #3BB3BD;
-  --warm-red: #DA5116;
-  --yellow: #FFC700;
+  --blue-100: #e9f7f8;
+  --blue-200: #d3eef0;
+  --blue-300: #bee6e9;
+  --blue-400: #a8dde2;
+  --blue-500: #92d5da;
+  --blue-600: #7cccd3;
+  --blue-700: #67c4cc;
+  --blue-800: #51bbc4;
+  --blue-900: #3bb3bd;
+  --bright-blue: #3bb3bd;
+  --purple: #746beb;
+  --purple-100: #f0edff;
+  --purple-200: #e2dcff;
+  --purple-300: #d3caff;
+  --purple-400: #c4b9ff;
+  --purple-500: #b6a7ff;
+  --purple-600: #a796ff;
+  --purple-700: #9884ff;
+  --purple-800: #8A73FF;
+  --purple-900: #7b61ff;
+  --warm-red: #e34d2f;
+  --warm-red-100: #fbeae7;
+  --warm-red-200: #f7d5cf;
+  --warm-red-300: #f2c0b6;
+  --warm-red-400: #eeab9e;
+  --warm-red-500: #ea9786;
+  --warm-red-600: #e6826e;
+  --warm-red-700: #e16d55;
+  --warm-red-800: #dd583d;
+  --warm-red-900: #d94325;
+  --white: #fefefe;
+  --yellow: #ffc700;
+  --yellow-100: #fff9e3;
+  --yellow-200: #fff3c6;
+  --yellow-300: #ffecaa;
+  --yellow-400: #ffe68e;
+  --yellow-500: #ffe071;
+  --yellow-600: #ffda55;
+  --yellow-700: #ffd339;
+  --yellow-800: #ffcd1c;
+  --yellow-900: #ffc700;
 }
 
 /* Reset */
@@ -96,6 +156,7 @@ img {
 
 /* General  */
 body {
+  background-color: var(--bg-pink);
   font-weight: normal;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -110,14 +171,14 @@ body {
   font-family: "Clash Display", sans-serif;
   font-size: 4rem;
   font-weight: bold;
-  line-height: 150%;
+  line-height: 120%;
 }
 
 .text-header-small {
   font-family: "Saans Trial", sans-serif;
   font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 150%;
+  font-weight: 500;
+  line-height: 120%;
 }
 
 .text-body-large {
@@ -127,9 +188,29 @@ body {
   line-height: 150%;
 }
 
-.text-body {
+.text-body-bold {
   font-family: "Saans Trial", sans-serif;
   font-size: 1rem;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.text-body-serif {
+  font-family: "Yorick Trial", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.text-body-bold {
+  font-family: "Saans Trial", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 150%;
+}
+.text-body {
+  font-family: "Saans Trial", sans-serif;
+  font-size: 1.25rem;
   font-weight: 500;
   line-height: 150%;
 }
@@ -139,4 +220,10 @@ body {
 .container {
   width: 90%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 55%;
+  }
 }
