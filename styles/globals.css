@@ -188,13 +188,6 @@ body {
   line-height: 150%;
 }
 
-.text-body-bold {
-  font-family: "Saans Trial", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 120%;
-}
-
 .text-body-serif {
   font-family: "Yorick Trial", serif;
   font-size: 1rem;
@@ -223,6 +216,29 @@ body {
   line-height: 130%;
 }
 
+@media screen and (max-width: 850px) {
+  .text-display {
+    font-size: 2rem;
+  }
+
+  .text-header-small {
+    font-size: 1rem;
+  }
+
+  .text-body-large {
+    font-size: 1rem;
+  }
+
+
+  .text-body-bold {
+    font-size: 1rem;
+  }
+
+  .text-note {
+    font-size: 0.75rem;
+  }
+}
+
 /* Layout */
 
 .container {
@@ -230,7 +246,7 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1800px) {
   .container {
     width: 55%;
   }
