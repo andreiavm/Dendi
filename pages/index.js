@@ -1,5 +1,5 @@
 import React from 'react';
-import { Product, Cart, Footer, FooterBanner, Header, HeroBanner, Layout, Navbar } from '../components';
+import { Product, Cart, Footer, FooterBanner, Header, HeroBanner, Navbar } from '../components';
 import Head from 'next/head'
 import styles from '../styles/home.module.css'
 import { data } from '../data'
