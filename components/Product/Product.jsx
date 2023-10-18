@@ -18,7 +18,6 @@ const Product = ({ product: { image, name, slug, price } }) => {
   const [color, setColor] = useState(colors[0]);
   
   useEffect(() => {
-    // Update the color after component is mounted on the client side
     setColor(getNextColor());
   }, []);
 
