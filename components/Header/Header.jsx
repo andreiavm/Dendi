@@ -3,7 +3,7 @@ import Navbar from '../Navbar/Navbar'
 import Image from 'next/image';
 import TopBanner from '../TopBanner/TopBanner';
 import { data } from '../../data.js';
-import styles from './styles.module.css'
+import styles from './header.module.css'
 
 const Header = () => {
     return (

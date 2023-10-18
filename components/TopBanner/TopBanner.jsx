@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.module.css'
+import styles from './topbanner.module.css'
 import { data } from '../../data.js';
 
 

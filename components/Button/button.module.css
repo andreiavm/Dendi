@@ -1,9 +1,9 @@
 .button {
     display: inline-flex;
-    padding: 1.25rem 1.5rem;
+    padding: 1rem 2rem;
     justify-content: center;
     align-items: center;
-    background: var(--purple);
+    background: var(--purple-800);
     box-shadow: 5px 5px 0px 0px var(--black);
     color: var(--white, #FEFEFE);
     font-family: Yorick trial;
@@ -14,8 +14,8 @@
 }
 
 .button:hover {
-    background: var(--purple-800);
-    /* text-decoration: underline; */
+    background: var(--purple-900);
+    text-decoration: underline wavy;
     cursor: pointer;
 }
 

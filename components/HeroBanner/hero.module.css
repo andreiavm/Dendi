@@ -35,7 +35,7 @@
     gap: 1rem;
     padding: 1.5rem;
     border: 2px solid var(--black);
-    background: var(--purple-600);
+    background: var(--purple-700);
     color: var(--white);
     grid-area: 1 / 2 / 2 / 3;
 }
