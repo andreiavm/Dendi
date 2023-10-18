@@ -6,10 +6,6 @@
     border: solid 2px var(--black);
 }
 
-.product_card+.product_card {
-    margin-left: 2rem;
-}
-
 .product_card:hover .product_name {
     text-decoration: wavy underline;
 }
@@ -47,10 +43,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-@media screen and (max-width: 1000px) {
-    .product_card {
-        width: 100%;
-    }
 }
