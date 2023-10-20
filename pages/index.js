@@ -1,5 +1,5 @@
 import React from 'react';
-import { Product, Cart, Footer, FooterBanner, Header, HeroBanner, Navbar } from '../components';
+import { Product, Cart, Footer, Header, HeroBanner, Newsletter } from '../components';
 import Head from 'next/head'
 import styles from '../styles/home.module.css'
 import { data } from '../data'
@@ -21,6 +21,8 @@ const Home = ({ banner, products }) => (
         {products?.map((product) => <Product key={product._id} product={product} />)}
       </div>
     </div>
+    <Newsletter />
+    <Footer />
   </>
 )
 export const getStaticProps = async () => {

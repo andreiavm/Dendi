@@ -5,12 +5,13 @@
     align-items: center;
     background: var(--purple-800);
     box-shadow: 3px 3px 0px 0px var(--black);
-    color: var(--white, #FEFEFE);
+    color: var(--white);
     font-family: Yorick trial;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
+    border: 1px solid var(--black);
 }
 
 .button:hover {
