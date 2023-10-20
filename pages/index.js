@@ -1,6 +1,5 @@
 import React from 'react';
-import { Product, Cart, Footer, Header, HeroBanner, Newsletter } from '../components';
-import Head from 'next/head'
+import { Product, Cart, HeroBanner, Newsletter } from '../components';
 import styles from '../styles/home.module.css'
 import { data } from '../data'
 import { client } from '../lib/client'
@@ -8,11 +7,6 @@ import { client } from '../lib/client'
 
 const Home = ({ banner, products }) => (
   <>
-    <Head>
-      <title>Dendi Studio | Home</title>
-      <meta property="og:title" content="My page title" key="title" />
-    </Head>
-    <Header />
     <HeroBanner heroBanner={banner.length && banner[0]} />
     {/* {(console.log(banner))} */}
     <div className="container">
@@ -22,7 +16,6 @@ const Home = ({ banner, products }) => (
       </div>
     </div>
     <Newsletter />
-    <Footer />
   </>
 )
 export const getStaticProps = async () => {
