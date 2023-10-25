@@ -11,8 +11,10 @@ const Home = ({ banner, products }) => (
     {/* {(console.log(banner))} */}
     <div className="container">
       <h2 className={`${styles.section_header} text-display-secondary`}>{data.index.header1}</h2>
-      <div className={styles.products_container}>
-        {products?.map((product) => <Product key={product._id} product={product} />)}
+      <div className={styles.product_wrapper}>
+        <div className={styles.products_container}>
+          {products?.map((product) => <Product key={product._id} product={product} />)}
+        </div>
       </div>
     </div>
     <Newsletter />
