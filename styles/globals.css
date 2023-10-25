@@ -176,17 +176,22 @@ body {
 }
 
 .text-display-secondary {
-  font-family: "Saans Trial", sans-serif;
+  font-family: "Clash Display", sans-serif;
   font-size: 3rem;
   font-weight: bold;
-  line-height: 120%;
+  line-height: 150%;
 }
-
+.text-header-serif {
+  font-family: "Yorick Trial", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 120%;
+}
 .text-header-small {
   font-family: "Saans Trial", sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
-  line-height: 120%;
+  line-height: 150%;
 }
 
 .text-body-large {

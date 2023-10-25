@@ -13,6 +13,21 @@
     line-height: normal;
     border: 1px solid var(--black);
 }
+.button_secondary {
+    display: inline-flex;
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    box-shadow: 3px 3px 0px 0px var(--black);
+    color: var(--black);
+    font-family: Yorick trial;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    border: 1px solid var(--black);
+}
 
 .button:hover {
     background: var(--purple-900);

@@ -1,3 +1,121 @@
 .product_page {
+    display: flex;
+    gap: 4rem;
     margin: 2rem auto;
+}
+
+.product_image {
+    border: 1px solid var(--black);
+    margin-bottom: 1rem;
+    background-color: var(--yellow-500);
+}
+
+.small_images_container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.small_image_wrapper {
+    border: 1px solid var(--black);
+    background-color: var(--warm-red-500);
+}
+
+.small_image_wrapper:hover {
+    cursor: pointer;
+}
+
+.small_image {
+    transition: all 0.2s ease-out;
+}
+
+.small_image_wrapper:hover .small_image {
+    scale: 1.05;
+}
+
+.product_details_wrapper {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--black);
+    padding: 1.5rem 0;
+}
+
+.quantity_selector_wrapper {
+    margin: 2rem 0;
+    align-self: flex-start;
+}
+
+.quantity_selector {
+    border: 1px solid var(--black);
+    font-family: "Saans Trial", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.quantity_button {
+    font-family: "Saans Trial", sans-serif;
+    font-size: 2rem;
+    padding: 0.75rem;
+    background-color: var(--white);
+    border: none;
+    outline: none;
+}
+
+.quantity_input {
+    text-align: center;
+    border: 0;
+    margin: 0 1rem;
+    font-family: "Saans Trial", sans-serif;
+    font-size: 2rem;
+    width: 6rem;
+}
+
+.product_price {
+    margin-top: 0.5rem;
+}
+
+.product_title {
+    color: var(--purple);
+}
+
+.product_description {
+    max-width: 50ch;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--black);
+}
+
+.similar_products_container {
+    gap: 1rem;
+    display: flex;
+    overflow-x: auto;
+    margin: 1rem auto;
+}
+
+@media screen and (max-width: 850px) {
+    .product_page {
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0 auto;
+    }
+
+    .quantity_selector_wrapper {
+        margin: 1rem 0;
+    }
+
+    .small_image_wrapper {
+        width: 25%;
+    }
+
+    .quantity_button {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .quantity_input {
+        font-size: 1.5rem;
+        width: 4rem;
+    }
 }

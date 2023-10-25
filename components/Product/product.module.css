@@ -1,5 +1,6 @@
 .product_card {
     display: flex;
+    min-width: 300px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -45,3 +46,4 @@
     justify-content: center;
     align-items: center;
 }
+ 
