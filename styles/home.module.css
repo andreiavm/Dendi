@@ -7,9 +7,15 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 1rem;
-    margin: 1rem auto;  
+    margin: 1rem auto;
 }
 
 @media screen and (max-width: 850px) {
-    
+    .section_header {
+        margin-top: 1rem;
+    }
+
+    .products_container {
+        margin: 0;
+    }
 }

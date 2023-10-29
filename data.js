@@ -22,6 +22,7 @@ const data = {
             text: "Inspiring notebooks, planners, notecards and writing paper. Your planning, journaling and desk essentials are here.",
             alt: "icon of journal",
         },
+        alt: "banner image",
     }
 }
 

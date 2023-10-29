@@ -20,6 +20,7 @@ const Home = ({ banner, products }) => (
     <Newsletter />
   </>
 )
+
 export const getStaticProps = async () => {
 
   async function getBanner() {

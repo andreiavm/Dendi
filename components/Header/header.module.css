@@ -15,7 +15,30 @@
     color: var(--grey);
 }
 
+.nav_container {
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    padding: 1.5rem;
+}
+
+.nav_link {
+    color: var(--grey);
+}
+
+.nav_link:hover {
+    text-decoration: wavy underline var(--black);
+    color: var (--black);
+}
+
 @media screen and (max-width: 1000px) {
+    .navbar {
+        display: none;
+    }
+
     .logo {
         width: 75%;
 

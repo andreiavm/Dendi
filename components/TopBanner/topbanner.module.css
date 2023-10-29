@@ -6,4 +6,11 @@
     justify-content: center;
     align-items: center;
     color: var(--white);
+    gap: 5rem;
+}
+
+
+.closeIcon:hover {
+    cursor: pointer;
+    text-decoration:  wavy underline;
 }
