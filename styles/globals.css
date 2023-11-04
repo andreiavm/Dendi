@@ -181,12 +181,14 @@ body {
   font-weight: bold;
   line-height: 150%;
 }
+
 .text-header-serif {
   font-family: "Yorick Trial", serif;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 120%;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 120%;
 }
+
 .text-header-small {
   font-family: "Saans Trial", sans-serif;
   font-size: 1.5rem;
@@ -264,6 +266,7 @@ body {
   .text-body-bold {
     font-size: 1rem;
   }
+
   .text-body {
     font-size: 1rem;
   }
@@ -271,6 +274,22 @@ body {
   .text-note {
     font-size: 0.75rem;
   }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translate(0, -1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.2s ease;
 }
 
 /* Layout */

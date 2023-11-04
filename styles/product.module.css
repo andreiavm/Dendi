@@ -74,6 +74,10 @@
     width: 6rem;
 }
 
+.quantity_input:focus {
+    outline: none;
+}
+
 .product_price {
     margin-top: 0.5rem;
 }
@@ -93,6 +97,7 @@
     display: flex;
     overflow-x: auto;
     margin: 1rem auto;
+    padding: 1rem 0;
 }
 
 @media screen and (max-width: 850px) {

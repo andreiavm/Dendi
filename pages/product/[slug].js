@@ -5,34 +5,19 @@ import Image from 'next/image'
 import Button from '../../components/Button/Button'
 import Product from '../../components/Product/Product'
 import { client, urlFor } from '../../lib/client'
+import { useStateContext } from '../../context/StateContext'
 
 const ProductDetails = ({ product, products }) => {
-    const { image, name, details, price } = product[0]
+    const { image, name, details, price } = product
     const [selectedImage, setSelectedImage] = useState(image[0])
+    const { incQty, decQty, qty, onAdd } = useStateContext()
 
     useEffect(() => {
         setSelectedImage(image[0]);
     }, [image]);
 
     const cardImageUrl = urlFor(image && selectedImage).width(298).height(280).url()
-    const [quantity, setQuantity] = useState(1);
 
-    const handleInputChange = (e) => {
-        const inputQuantity = parseInt(e.target.value);
-        if (!isNaN(inputQuantity) && inputQuantity >= 1) {
-            setQuantity(inputQuantity);
-        }
-    };
-
-    const handleIncrement = () => {
-        setQuantity(quantity + 1);
-    };
-
-    const handleDecrement = () => {
-        if (quantity > 1) {
-            setQuantity(quantity - 1);
-        }
-    };
 
     return (
         <>
@@ -42,7 +27,7 @@ const ProductDetails = ({ product, products }) => {
                         <Image
                             src={cardImageUrl}
                             className={styles.product_image}
-                            alt="test"
+                            alt={name}
                             width="696"
                             height="654"
                             priority>
@@ -68,15 +53,21 @@ const ProductDetails = ({ product, products }) => {
                         <div className={`${styles.quantity_selector_wrapper}`}>
                             <h2 className="text-header-small">Quantity:</h2>
                             <div className={styles.quantity_selector}>
-                                <button onClick={handleDecrement} className={styles.quantity_button}>-</button>
-                                <input className={styles.quantity_input}
+                                <button onClick={decQty} className={styles.quantity_button}>-</button>
+                                <input
+                                    id="quantity-input"
+                                    className={styles.quantity_input}
                                     type="number"
-                                    value={quantity}
-                                    onChange={handleInputChange}
+                                    value={qty}
+                                    readOnly
+                                // onChange={handleQuantityChange}
                                 />
-                                <button onClick={handleIncrement} className={styles.quantity_button}>+</button>
+                                <button onClick={incQty} className={styles.quantity_button}>+</button>
                             </div>
-                            <Button className={styles.cart_button} label="add to cart" />
+                            <Button
+                                className={styles.cart_button}
+                                label="add to cart"
+                                onClick={() => onAdd(product, qty)} />
                         </div>
                         <div className={`${styles.product_description} text-header-small`}>{details}</div>
                     </div>
@@ -91,6 +82,7 @@ const ProductDetails = ({ product, products }) => {
                             />
                         ))}
                     </div>
+                    {(console.log(qty))}
                 </div>
             </div>
         </>
@@ -127,7 +119,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
     return {
         props: {
             products,
-            product
+            product: product[0],
         },
     };
 };

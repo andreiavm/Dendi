@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@sanity/cli": "^3.18.0",
@@ -28,6 +30,7 @@
   "devDependencies": {
     "@babel/preset-react": "^7.22.15",
     "eslint": "8.51.0",
-    "eslint-config-next": "13.5.4"
+    "eslint-config-next": "13.5.4",
+    "eslint-plugin-storybook": "^0.6.15"
   }
 }

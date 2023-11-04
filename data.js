@@ -4,6 +4,12 @@ const data = {
     header: {
         logoSrc: "/logo-dendi.svg",
         logoAlt: "Dendi Logo",
+        cartSrc:"/cart.svg",
+        cartAlt: "Cart Icon",
+        searchSrc: "/search.svg",
+        searchAlt: "Search Icon",
+        profileSrc: "/profile.svg",
+        profileAlt: "Profile Icon",
     },
     index: {
         header1: "Essentials to plan, think & connect",

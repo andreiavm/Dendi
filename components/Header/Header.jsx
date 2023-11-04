@@ -5,14 +5,16 @@ import TopBanner from '../TopBanner/TopBanner';
 import { data } from '../../data.js';
 import styles from './header.module.css'
 import { client } from '../../lib/client';
+import { useStateContext } from '../../context/StateContext.js';
 
 const Header = () => {
     const [categories, setCategories] = useState([]);
+    const { showCart, setShowCart, totalQuantities } = useStateContext();
 
     async function getCategories() {
         try {
             const categoriesList = await client.fetch('*[_type == "category"]');
-            setCategories(categoriesList); 
+            setCategories(categoriesList);
         } catch (error) {
             console.error('Error fetching categories:', error);
         }
@@ -29,11 +31,35 @@ const Header = () => {
                     <Image
                         src={data.header.logoSrc}
                         alt={data.header.logoAlt}
-                        width="459" height="79" 
+                        width="459" height="79"
                         priority>
                     </Image>
                 </Link>
-                <h2 className={`${styles.logo_header} text-header-small`}>~ stationery & more 💌 ~</h2>
+                <div className={`${styles.header_row} container`}>
+                    <div className={styles.logo_search_wrapper}>
+                    </div>
+                    <h2 className={`${styles.header_text} text-header-small`}>~ stationery & more 💌 ~</h2>
+                    <div className={styles.logo_cart_wrapper}>
+                        <Link href="/cart/cart">
+                            <div className={styles.logo_cart} >
+                                <Image
+                                    className={styles.logo_cart_img}
+                                    src={data.header.cartSrc}
+                                    alt={data.header.cartAlt}
+                                    width="28" height="28"
+                                    priority>
+                                </Image>
+                                {/* <div className="text-note">cart</div> */}
+                                {totalQuantities > 0 ? (
+                                    <div className={`${styles.cart_count} text-note`}>
+                                        {totalQuantities > 99 ? '99+' : totalQuantities}
+                                    </div>
+                                ) : null}
+                            </div>
+                        </Link>
+                    </div>
+
+                </div>
             </div>
             <nav className={`${styles.navbar} container`}>
                 <div className={styles.nav_container}>
@@ -44,9 +70,7 @@ const Header = () => {
                     ))}
                 </div>
             </nav>
-
         </>
-
     )
 }
 

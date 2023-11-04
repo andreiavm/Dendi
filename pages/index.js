@@ -1,5 +1,5 @@
 import React from 'react';
-import { Product, Cart, HeroBanner, Newsletter } from '../components';
+import { Product, HeroBanner, Newsletter } from '../components';
 import styles from '../styles/home.module.css'
 import { data } from '../data'
 import { client } from '../lib/client'

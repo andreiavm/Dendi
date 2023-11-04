@@ -2,9 +2,6 @@ import React from 'react';
 import { client } from '../../lib/client';
 import styles from '../../styles/category.module.css';
 import Product from '../../components/Product/Product';
-import { urlFor } from '../../lib/client'
-import Image from 'next/image'
-import { data } from '../../data'
 
 const CategoryPage = ({ category, products }) => {
 

@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer';
 
 const Layout = ({ children }) => {
     return (
-        <div className="layout">
+        <div>
             <Head>
                 <title>Dendi Studio | Home</title>
                 <meta property="og:title" content="My page title" key="title" />
