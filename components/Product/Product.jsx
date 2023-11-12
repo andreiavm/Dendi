@@ -16,7 +16,7 @@ function getNextColor() {
 const Product = ({ product: { image, name, slug, price } }) => {
   const cardImageUrl = urlFor(image && image[0]).width(298).height(280).url()
   const [color, setColor] = useState(colors[0]);
-  
+
   useEffect(() => {
     setColor(getNextColor());
   }, []);
@@ -29,7 +29,7 @@ const Product = ({ product: { image, name, slug, price } }) => {
             <Image
               src={cardImageUrl}
               className={styles.product_image}
-              alt="test"
+              alt={name}
               width="298"
               height="280"
               priority>

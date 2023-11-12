@@ -182,6 +182,13 @@ body {
   line-height: 150%;
 }
 
+.text-header {
+  font-family: "Clash Display", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 150%;
+}
+
 .text-header-serif {
   font-family: "Yorick Trial", serif;
   font-size: 2rem;

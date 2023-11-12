@@ -6,6 +6,7 @@ import { data } from '../../data.js';
 import styles from './header.module.css'
 import { client } from '../../lib/client';
 import { useStateContext } from '../../context/StateContext.js';
+import Cart from '../Cart/Cart.jsx';
 
 const Header = () => {
     const [categories, setCategories] = useState([]);
@@ -40,23 +41,21 @@ const Header = () => {
                     </div>
                     <h2 className={`${styles.header_text} text-header-small`}>~ stationery & more 💌 ~</h2>
                     <div className={styles.logo_cart_wrapper}>
-                        <Link href="/cart/cart">
-                            <div className={styles.logo_cart} >
-                                <Image
-                                    className={styles.logo_cart_img}
-                                    src={data.header.cartSrc}
-                                    alt={data.header.cartAlt}
-                                    width="28" height="28"
-                                    priority>
-                                </Image>
-                                {/* <div className="text-note">cart</div> */}
-                                {totalQuantities > 0 ? (
-                                    <div className={`${styles.cart_count} text-note`}>
-                                        {totalQuantities > 99 ? '99+' : totalQuantities}
-                                    </div>
-                                ) : null}
-                            </div>
-                        </Link>
+                        <div className={styles.logo_cart} >
+                            <Image
+                                onClick={() => setShowCart(!showCart)}
+                                className={styles.logo_cart_img}
+                                src={data.header.cartSrc}
+                                alt={data.header.cartAlt}
+                                width="28" height="28"
+                                priority>
+                            </Image>
+                            {totalQuantities > 0 ? (
+                                <div className={`${styles.cart_count} text-note`}>
+                                    {totalQuantities > 99 ? '99+' : totalQuantities}
+                                </div>
+                            ) : null}
+                        </div>
                     </div>
 
                 </div>
@@ -70,6 +69,7 @@ const Header = () => {
                     ))}
                 </div>
             </nav>
+            {showCart && <Cart />}
         </>
     )
 }

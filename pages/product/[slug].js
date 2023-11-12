@@ -50,7 +50,7 @@ const ProductDetails = ({ product, products }) => {
                     <div className={styles.product_details_wrapper}>
                         <div className={`${styles.product_title} text-display-secondary`}>{name}</div>
                         <div className={`${styles.product_price} text-header-serif`}>{price}$</div>
-                        <div className={`${styles.quantity_selector_wrapper}`}>
+                        <div className={styles.quantity_selector_wrapper}>
                             <h2 className="text-header-small">Quantity:</h2>
                             <div className={styles.quantity_selector}>
                                 <button onClick={decQty} className={styles.quantity_button}>-</button>

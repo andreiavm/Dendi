@@ -11,6 +11,16 @@ const data = {
         profileSrc: "/profile.svg",
         profileAlt: "Profile Icon",
     },
+
+    cart: {
+        closeSrc: "/close.svg",
+        deleteSrc: "/delete.svg",
+        deleteAlt: "Delete Icon",
+        closeAlt: "Close Icon",
+        title: "Your Cart",
+        emptyCart: "Your cart is empty",
+    },
+    
     index: {
         header1: "Essentials to plan, think & connect",
 
