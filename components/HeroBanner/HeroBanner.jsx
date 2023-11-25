@@ -28,7 +28,7 @@ const HeroBanner = ({ heroBanner }) => {
       </div>
       <div className={styles.bottom_container}>
         <div className={styles.container_left}>
-          <h1 className={`${styles.header_bottom} text-display`}>{heroBanner.largeText}</h1>
+          <h1 className={`${styles.header_bottom} text-display-secondary`}>{heroBanner.largeText}</h1>
           <p className={`${styles.body_bottom} text-body-large`}>{heroBanner.smallText}</p>
           <Button label={heroBanner.buttonText}></Button>
         </div>
