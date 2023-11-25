@@ -11,12 +11,12 @@ const HeroBanner = ({ heroBanner }) => {
   return (
     <div className={`${styles.container} container`}>
       <div className={styles.title_container}>
-        <h1 className={`${styles.header_top} text-display`}>{data.banner.title}</h1>
-        <div className={styles.icons_wrapper}>
+        <h1 className={`${styles.header_top} text-display-secondary`}>{data.banner.title}</h1>
+        {/* <div className={styles.icons_wrapper}>
           <h2 className={`${styles.header_icon} text-display`}>🖇️</h2>
           <h2 className={`${styles.header_icon} text-display`}>📚</h2>
           <h2 className={`${styles.header_icon} text-display`}>📝</h2>
-        </div>
+        </div> */}
       </div>
       <div className={styles.card1_container}>
         <Image alt={data.banner.card1.alt} src={data.banner.card1.icon} width="48" height="48"></Image>
