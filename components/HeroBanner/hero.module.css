@@ -16,6 +16,7 @@
 
 .header_top {
     color: var(--purple);
+    max-width: 16ch;
 }
 
 .icons_wrapper {
