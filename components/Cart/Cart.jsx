@@ -28,7 +28,7 @@ const CartPage = () => {
 
         const data = await response.json();
 
-        toast.loading('Redirecting...');
+        // toast.loading('Redirecting...');
     }
 
     return (
