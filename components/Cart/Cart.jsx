@@ -7,12 +7,29 @@ import { data } from '../../data.js';
 import Button from '../../components/Button/Button'
 import { urlFor } from '../../lib/client'
 import { useStateContext } from '../../context/StateContext'
-
+import getStripe from '../../lib/getStripe'
 
 
 const CartPage = () => {
     const cartRef = useRef();
     const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext()
+
+    const handleCheckout = async () => {
+        const stripe = await getStripe();
+        const response = await fetch('/api/stripe', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(cartItems),
+        });
+
+        if (response.statusCode === 500) return;
+
+        const data = await response.json();
+
+        toast.loading('Redirecting...');
+    }
 
     return (
         <div className={styles.cart_wrapper} ref={cartRef}>
@@ -55,7 +72,7 @@ const CartPage = () => {
                                         onClick={() => toggleCartItemQuantity(item._id, "dec")}
                                         className={styles.quantity_button}>-</button>
                                     <input
-                                        id="quantity-input"
+                                        id="quantity-input-2"
                                         className={styles.quantity_input}
                                         type="number"
                                         value={item.quantity}
@@ -67,7 +84,7 @@ const CartPage = () => {
                                 </div>
                                 <Image
                                     className={styles.close_btn_img}
-                                    onClick = {() => onRemove(item)}
+                                    onClick={() => onRemove(item)}
                                     src={data.cart.deleteSrc}
                                     alt={data.cart.deleteAlt}
                                     width="28" height="28"
@@ -82,7 +99,7 @@ const CartPage = () => {
             {cartItems.length > 0 && (
                 <div className={styles.cart_bottom}>
                     <h3 className={`${styles.cart_total} text-body-large`}>Subtotal: {totalPrice.toFixed(2)} </h3>
-                    <Button label="go to checkout"></Button>
+                    <Button onClick={handleCheckout} label="go to checkout"></Button>
                 </div>
             )}
         </div >
